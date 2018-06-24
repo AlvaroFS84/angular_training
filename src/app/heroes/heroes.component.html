@@ -1,10 +1,4 @@
 <div>
-  <div *ngIf="selectedHero">
-      <h2>{{selectedHero.name | uppercase}} Details</h2>
-      <div>
-        <span>id: {{selectedHero.id}}</span>
-      </div>
-  </div>
   <ul class="heroes">
     <li *ngFor="let hero of heroes" 
       [class.selected]="hero === selectedHero" 
@@ -13,3 +7,4 @@
     </li>
   </ul>
 </div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
